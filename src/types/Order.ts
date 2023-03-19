@@ -1,4 +1,5 @@
 export interface ProductsProps {
+  _id: string;
   product: {
     name: string;
     imagePath: string;
@@ -10,7 +11,7 @@ export interface ProductsProps {
 export interface OrderProps {
   _id: string;
   table: string;
-  status: string;
+  status: 'DONE' | 'IN_PRODUCTION' | 'WAITING';
   products: ProductsProps[];
 }
 

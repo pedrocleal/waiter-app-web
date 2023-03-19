@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
 
@@ -10,6 +10,7 @@ export const Container = styled.div`
   width: 100%;
   margin: 52px auto;
 
+  height: 100%;
   @media (max-width: 768px) {
     flex-direction: column;
   }

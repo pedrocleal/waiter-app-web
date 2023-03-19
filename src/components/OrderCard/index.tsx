@@ -1,15 +1,16 @@
+import { OrderProps } from '../../types/Order';
 import { Container } from './styles';
 
 interface OrderCardProps {
-  table: string;
-  itemsQuantity: number;
+  order: OrderProps;
+  handleOpenModal: () => void;
 }
 
-export function OrderCard({ table, itemsQuantity }: OrderCardProps) {
+export function OrderCard({ order, handleOpenModal }: OrderCardProps) {
   return (
-    <Container>
-      <h1>{`Mesa ${table}`}</h1>
-      <span>{`${itemsQuantity} itens`}</span>
+    <Container onClick={handleOpenModal}>
+      <h1>{`Mesa ${order.table}`}</h1>
+      <span>{`${order.products.length} itens`}</span>
     </Container>
   );
 }

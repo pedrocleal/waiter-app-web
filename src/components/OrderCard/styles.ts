@@ -13,8 +13,12 @@ export const Container = styled.button`
   border-radius: 8px;
 
   h1 {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500;
     color: #333;
+  }
+
+  span {
+    font-size: 14px;
   }
 `;

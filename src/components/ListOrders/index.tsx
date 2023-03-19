@@ -6,72 +6,28 @@ const orders: OrderProps[] = [
   {
     _id: '6372e48cbcd195b0d3d0f7f3',
     table: '6',
-    status: 'WAITING',
-    products: [
-      {
-        product: {
-          name: 'Pizza quatro queijos',
-          imagePath: '1668472896991-quatro-queijos.png',
-          price: 40,
-        },
-        quantity: 3,
-      },
-      {
-        product: {
-          name: 'Coca cola',
-          imagePath: '1668473462705-coca-cola.png',
-          price: 7,
-        },
-        quantity: 2,
-      }
-    ],
-  },
-  {
-    _id: '6372e48cbcd195b0d3d0f7f3',
-    table: '3',
-    status: 'IN_PRODUCTION',
-    products: [
-      {
-        product: {
-          name: 'Pizza quatro queijos',
-          imagePath: '1668472896991-quatro-queijos.png',
-          price: 40,
-        },
-        quantity: 3,
-      },
-      {
-        product: {
-          name: 'Coca cola',
-          imagePath: '1668473462705-coca-cola.png',
-          price: 7,
-        },
-        quantity: 2,
-      }
-    ],
-  },
-  {
-    _id: '6372e48cbcd195b0d3d0f7f3',
-    table: '2',
     status: 'DONE',
     products: [
       {
+        _id: '6372e48cbcd195b0d3d0f7f4',
         product: {
           name: 'Pizza quatro queijos',
-          imagePath: '1668472896991-quatro-queijos.png',
+          imagePath: '1678933417830-quatro-queijos.png',
           price: 40,
         },
         quantity: 3,
       },
       {
+        _id: '6372e48cbcd195213d0f7f3',
         product: {
           name: 'Coca cola',
-          imagePath: '1668473462705-coca-cola.png',
+          imagePath: '1678933903604-coca-cola.png',
           price: 7,
         },
         quantity: 2,
       }
     ],
-  }
+  },
 ];
 
 export function ListOrders() {
@@ -82,15 +38,15 @@ export function ListOrders() {
   return (
     <Container>
       <Board
-        title={`🕜 Fila de espera (${orders.length})`}
+        title={`🕜 Fila de espera (${waitingOrders.length})`}
         orders={waitingOrders}
       />
       <Board
-        title={`🧑🏾‍🍳 Em produção (${orders.length})`}
+        title={`🧑🏾‍🍳 Em produção (${cookingOrders.length})`}
         orders={cookingOrders}
       />
       <Board
-        title={`✅ Pronto (${orders.length})`}
+        title={`✅ Pronto (${readyOrders.length})`}
         orders={readyOrders}
       />
     </Container>
